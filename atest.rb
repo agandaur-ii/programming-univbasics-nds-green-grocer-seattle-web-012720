@@ -127,7 +127,7 @@ def apply_coupons(cart, coupons)
     c_index += 1
   end
   final_index = 0 
-  while index < cart.length do 
+  while final_index < cart.length do 
     if cart[final_index][:count] != 0 
       index += 1 
     else 
