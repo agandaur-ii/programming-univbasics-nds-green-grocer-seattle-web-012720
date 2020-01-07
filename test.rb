@@ -214,4 +214,4 @@ def checkout(cart, coupons)
   final
 end
 
-pp clearance(clearance_test_two)
+pp apply_clearance(clearance_test_two)
