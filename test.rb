@@ -205,4 +205,4 @@ def checkout(cart, coupons)
   final
 end
 
-pp checkout(test_data_two, the_final_coupon)
+pp checkout(check_out_cart, the_final_coupon)
