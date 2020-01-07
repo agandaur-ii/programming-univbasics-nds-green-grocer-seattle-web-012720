@@ -184,9 +184,14 @@ def checkout(cart, coupons)
   # some irritated customers
   
   consolidate = consolidate_cart(cart)
-  
+  puts "1."
+  pp consolidate
   coupons = apply_coupons(consolidate, coupons)
+  puts "2."
+  pp coupons
   clearance = apply_clearance(coupons)
+  puts "3."
+  pp clearance
   
   total = 0 
   index = 0 
