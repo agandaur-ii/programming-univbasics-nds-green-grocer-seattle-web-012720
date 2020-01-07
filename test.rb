@@ -240,6 +240,6 @@ def checkout(cart, coupons)
   final
 end
 
-pp apply_coupons()
+pp apply_coupons(beer_cart_count, beer_coupon)
 
 #pp checkout(das_cart, the_final_coupon)
