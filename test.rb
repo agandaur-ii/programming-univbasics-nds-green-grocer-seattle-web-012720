@@ -232,4 +232,4 @@ def checkout(cart, coupons)
   final
 end
 
-pp apply_clearance(clearance_test_two)
+pp checkout(das_cart, the_final_coupon)
