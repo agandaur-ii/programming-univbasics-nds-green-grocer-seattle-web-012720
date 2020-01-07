@@ -174,6 +174,7 @@ def checkout(cart, coupons)
   # some irritated customers
   
   consolidate = consolidate_cart(cart)
+  
   coupons = apply_coupons(consolidate, coupons)
   clearance = apply_clearance(coupons)
   
