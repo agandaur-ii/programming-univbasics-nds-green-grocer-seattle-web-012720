@@ -72,6 +72,14 @@ clearance_test_two = [
  {:item=>"CHEESE W/COUPON", :price=>5.0, :clearance=>false, :count=>3}
 ]
 
+das_cart = [
+ {:item => "SOY MILK", :price => 4.50, :clearance => true},
+ {:item => "AVOCADO", :price => 3.00, :clearance => true},
+ {:item => "AVOCADO", :price => 3.00, :clearance => true},
+ {:item => "CHEESE", :price => 6.50, :clearance => false},
+ {:item => "CHEESE", :price => 6.50, :clearance => false},
+ {:item => "CHEESE", :price => 6.50, :clearance => false}
+]
 
 
 def find_item_by_name_in_collection(name, collection)
