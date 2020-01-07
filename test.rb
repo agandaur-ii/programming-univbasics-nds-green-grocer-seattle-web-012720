@@ -72,6 +72,8 @@ clearance_test_two = [
  {:item=>"CHEESE W/COUPON", :price=>5.0, :clearance=>false, :count=>3}
 ]
 
+
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
