@@ -198,7 +198,6 @@ def checkout(cart, coupons)
   if total <= 100 
     return total
   end
-  puts "I got here"
   ten_percent = total / 10
   final = total - ten_percent
   final
