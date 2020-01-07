@@ -103,51 +103,48 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  if coupons == []
+   if coupons == []
     return cart
   end  
   
-  #1 Find item on cart that has coupons
   list_of_items = create_array_of_items(cart)
-  place_holder = create_array_of_items(coupons)
-  coupon_item = place_holder[0]
-  index = 0 
-  while index < list_of_items.length do
-    if coupon_item == list_of_items[index]
-      new = cart[index]
-      new
+  couponed_items = create_array_of_items(coupons)
+  c_index = 0
+  while c_index < couponed_items.length do
+    l_index = 0
+    while l_index < list_of_items.length do 
+      if couponed_items[c_index] == list_of_items[l_index]
+        with_coupon_hash = {}
+        with_coupon_hash[:item] = "#{couponed_items[c_index]} W/COUPON"
+        with_coupon_hash[:price] = coupons[c_index][:cost] / coupons[c_index][:num]
+        with_coupon_hash[:clearance] = cart[l_index][:clearance]
+        with_coupon_hash[:count] = coupons[c_index][:num]
+  
+        cart[l_index][:count] -=  coupons[c_index][:num]
+        l_index += 1
+        
+        check_index = 0 
+         while check_index < cart.length do
+           if with_coupon_hash == cart[check_index]
+             t_f_list = []
+             t_f_list << "Don't process"
+             check_index += 1
+           end
+           check_index += 1
+         end
+
+         if t_f_list == nil
+           cart << with_coupon_hash
+         else 
+           puts "Coupon already redeemed"
+         end
+      else
+      l_index += 1
+      end  
     end
-    index += 1
+    c_index += 1
   end
-  
-  index_of_item_that_has_coupon = new
-  puts "======"
-  puts index_of_item_that_has_coupon
-  puts "======"
-  
-  if index_of_item_that_has_coupon[:count] < coupons[0][:num]
-    return cart
-  end
-  
-  #2 Add new hash to cart array that has an updated item, price, and count
-  with_coupon_hash = {}
-  with_coupon_hash[:item] = "#{coupon_item} W/COUPON"
-  with_coupon_hash[:price] = coupons[0][:cost] / coupons[0][:num]
-  with_coupon_hash[:clearance] = index_of_item_that_has_coupon[:clearance]
-  with_coupon_hash[:count] = coupons[0][:num]
-  
-  index_of_item_that_has_coupon[:count] -=  coupons[0][:num]
-  
-  #3 Check previous coupons
-  check_index = 0 
-  while check_index < cart.length do
-    if with_coupon_hash == cart[check_index]
-      return cart
-    end
-   check_index += 1
-  end
-  
-  cart << with_coupon_hash
+  cart
 end
 
 def apply_clearance(cart)
