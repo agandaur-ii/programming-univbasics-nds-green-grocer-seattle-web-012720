@@ -39,8 +39,8 @@ cheese_coupon = [
 test_coupon = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 
 the_final_cart = [
-  {:item => "CHEESE", :price => 6.50, :clearance => false, :count => 4}
-  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3},
+  {:item => "CHEESE", :price => 6.50, :clearance => false, :count => 4},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3}
   ]
 
 the_final_coupon =    [
