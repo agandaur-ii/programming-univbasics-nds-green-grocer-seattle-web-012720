@@ -220,7 +220,7 @@ def checkout(cart, coupons)
   total = 0 
   index = 0 
   while index < clearance.length do
-    total += clearance[index][:price]
+    total += clearance[index][:price] * clearance[index][:count]
     index += 1
   end  
   
