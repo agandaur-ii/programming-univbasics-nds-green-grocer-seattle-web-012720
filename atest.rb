@@ -80,6 +80,7 @@ def apply_coupons(cart, coupons)
   while c_index < couponed_items.length do
     l_index = 0
     while l_index < list_of_items.length do 
+      puts "test"
       if couponed_items[c_index] == list_of_items[l_index]
         with_coupon_hash = {}
         with_coupon_hash[:item] = "#{couponed_items[c_index]} W/COUPON"
