@@ -224,4 +224,6 @@ def checkout(cart, coupons)
   final
 end
 
-pp checkout(das_cart, the_final_coupon)
+pp apply_coupons()
+
+#pp checkout(das_cart, the_final_coupon)
