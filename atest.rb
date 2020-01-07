@@ -1,3 +1,13 @@
+the_final_cart = [
+  {:item => "CHEESE", :price => 6.50, :clearance => false, :count => 4},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3}
+  ]
+
+the_final_coupon =    [
+      {:item => "AVOCADO", :num => 2, :cost => 5.00},
+      {:item => "CHEESE", :num => 3, :cost => 15.00}
+    ]
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -45,10 +55,11 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-   if coupons == []
+  if coupons == []
     return cart
   end  
   
+  #1 Find items on cart that has coupons
   list_of_items = create_array_of_items(cart)
   couponed_items = create_array_of_items(coupons)
   c_index = 0
@@ -65,6 +76,10 @@ def apply_coupons(cart, coupons)
         cart[l_index][:count] -=  coupons[c_index][:num]
         l_index += 1
         
+        puts "==============="
+        puts with_coupon_hash
+        puts "==============="
+        
         check_index = 0 
          while check_index < cart.length do
            if with_coupon_hash == cart[check_index]
@@ -74,7 +89,11 @@ def apply_coupons(cart, coupons)
            end
            check_index += 1
          end
-
+         
+         puts "++++++++++++"
+         pp t_f_list
+         puts "++++++++++++"
+         
          if t_f_list == nil
            cart << with_coupon_hash
          else 
@@ -88,49 +107,5 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
-end
 
-def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
-  index = 0 
-  while index < cart.length do 
-    if cart[index][:clearance] == true
-      twenty_percent = cart[index][:price] / 5
-      cart[index][:price] -= twenty_percent
-    end
-    index += 1
-  end
-  cart
-end
-
-def checkout(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # This method should call
-  # * consolidate_cart
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
-  
-  consolidate = consolidate_cart(cart)
-  coupons = apply_coupons(consolidate, coupons)
-  clearance = apply_clearance(coupons)
-  
-  total = 0 
-  index = 0 
-  while index < clearance.length do
-    total += clearance[index][:price]
-    index += 1
-  end  
-  
-  if total <= 100 
-    return total
-  end
-  ten_percent = total / 10
-  final = total - ten_percent
-  final
-end
+pp apply_coupons(the_final_cart, the_final_coupon)
