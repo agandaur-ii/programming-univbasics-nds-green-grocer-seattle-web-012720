@@ -131,7 +131,7 @@ def apply_coupons(cart, coupons)
     if cart[index][:count] != 0 
       index += 1 
     else 
-      
+      cart.delete_at(index)
     end  
   end
   cart
