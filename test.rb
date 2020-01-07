@@ -194,6 +194,4 @@ def checkout(cart, coupons)
   final
 end
 
-new_array = []
-
 pp checkout(test_data_two, the_final_coupon)
