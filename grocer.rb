@@ -55,7 +55,7 @@ def apply_coupons(cart, coupons)
   while c_index < couponed_items.length do
     l_index = 0
     while l_index < list_of_items.length do 
-      if couponed_items[c_index] == list_of_items[l_index]
+      if couponed_items[c_index] == list_of_items[l_index] && cart[l_index][:count] >= coupons[c_index][:num]
         with_coupon_hash = {}
         with_coupon_hash[:item] = "#{couponed_items[c_index]} W/COUPON"
         with_coupon_hash[:price] = coupons[c_index][:cost] / coupons[c_index][:num]
