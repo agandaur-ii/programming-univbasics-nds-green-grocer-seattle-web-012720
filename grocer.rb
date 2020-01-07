@@ -86,6 +86,14 @@ def apply_coupons(cart, coupons)
     end
     c_index += 1
   end
+  final_index = 0 
+  while final_index < cart.length do 
+    if cart[final_index][:count] != 0 
+      final_index += 1 
+    else 
+      cart.delete_at(final_index)
+    end  
+  end
   cart
 end
 
