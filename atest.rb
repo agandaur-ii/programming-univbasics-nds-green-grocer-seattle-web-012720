@@ -11,6 +11,16 @@ the_final_coupon =    [
 avo_coupon = [
   {:item => "AVOCADO", :num => 2, :cost => 5.00}
   ]
+  
+das_cart = [
+ {:item => "SOY MILK", :price => 4.50, :clearance => true},
+ {:item => "AVOCADO", :price => 3.00, :clearance => true},
+ {:item => "AVOCADO", :price => 3.00, :clearance => true},
+ {:item => "CHEESE", :price => 6.50, :clearance => false},
+ {:item => "CHEESE", :price => 6.50, :clearance => false},
+ {:item => "CHEESE", :price => 6.50, :clearance => false}
+]
+
 
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
