@@ -112,4 +112,4 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-pp apply_coupons(the_final_cart, the_final_coupon)
+pp apply_coupons(the_final_cart, avo_coupon)
