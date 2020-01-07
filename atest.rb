@@ -7,6 +7,10 @@ the_final_coupon =    [
       {:item => "AVOCADO", :num => 2, :cost => 5.00},
       {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
+    
+avo_coupon = [
+  {:item => "AVOCADO", :num => 2, :cost => 5.00}
+  ]
 
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
