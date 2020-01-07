@@ -195,8 +195,6 @@ def checkout(cart, coupons)
     index += 1
   end  
   
-  puts total
-  
   if total <= 100 
     return total
   end
