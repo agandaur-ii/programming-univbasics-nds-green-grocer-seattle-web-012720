@@ -21,6 +21,12 @@ das_cart = [
  {:item => "CHEESE", :price => 6.50, :clearance => false}
 ]
 
+das_cart_two = [
+  {:item => "SOY MILK", :price => 4.50, :clearance => true, :count => 1},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2},
+  {:item => "CHEESE", :price => 6.50, :clearance => false, :count => 3}
+  ]
+
 
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
