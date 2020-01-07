@@ -196,4 +196,4 @@ end
 
 new_array = []
 
-pp apply_coupons(cheese_cart, new_array)
+pp checkout(test_data_two, the_final_coupon)
