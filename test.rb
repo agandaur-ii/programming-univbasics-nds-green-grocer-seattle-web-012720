@@ -49,6 +49,16 @@ the_final_coupon =    [
       {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
 
+check_out_cart = [
+  {:item => "CHEESE", :price => 6.50, :clearance => false},
+  {:item => "CHEESE", :price => 6.50, :clearance => false},
+  {:item => "CHEESE", :price => 6.50, :clearance => false},
+  {:item => "CHEESE", :price => 6.50, :clearance => false},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true}
+  ]
+
 
 clearance_test = [
   {:item => "PEANUT BUTTER", :price => 3.00, :clearance => true,  :count => 2},
