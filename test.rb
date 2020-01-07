@@ -81,6 +81,22 @@ das_cart = [
  {:item => "CHEESE", :price => 6.50, :clearance => false}
 ]
 
+beer_cart = [
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "BEER", :num => 2, :cost => 20.00}
+]
+
+beer_cart_count = [
+  {:item => "BEER", :num => 2, :cost => 20.00, :count => 3}
+]
+
+beer_coupon = [
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "BEER", :num => 2, :cost => 20.00}
+]
+
+
 
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
